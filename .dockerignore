@@ -1,0 +1,6 @@
+# list files that we want to ignore
+dummy.txt
+node_modules
+
+# You can also list extensions to target multiple files by extension
+*.txt
