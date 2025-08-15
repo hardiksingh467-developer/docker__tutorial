@@ -81,3 +81,33 @@ We specify the files that we do not want in docker image, such as node_modules
 refer to .dockerignore
 
 ## Delete Images and Containers
+```
+We cannot update Images, We always Create new Images, hence we need to delete previous images
+Delete operation can be performed in two ways
+1. Using Docker Desktop
+2. Command Line OR Terminal; If images OR containers are on our server such as AWS, GCP, AZURE we can only use Terminal
+```
+#### Delete Images with Docker Desktop
+```
+Go to Images Menu from Sidebar
+There will be a delete Icon in front of every image, click that anf click "Delete Forever"
+Images that are being used in any Container, that is , whose status is "In Use" cannot be deleted
+Hence we first need to delete the Container utilizing that specific Image
+```
+#### Delete Containers with Docker Desktop
+```
+Go to Containers Menu from Sidebar
+There will be a delete Icon in front of every Container, click that anf click "Delete Forever"
+```
+#### Delete Images OR Containers with Terminal
+```
+To READ all images we use command: docker images
+To DELETE an un-used image we use command: docker image rm <imageName>
+To DELETE an in-used image forcefully we use command: docker image rm <imageName> -f
+To READ all containers we use command("ps" stands for processors): docker ps -a
+To DELETE a non running container we use command: docker container rm <containerName>
+To DELETE a running container forcefully we use command: docker container rm <containerName> -f
+```
+
+
+## Manage Versions of Images
