@@ -99,6 +99,7 @@ Hence we first need to delete the Container utilizing that specific Image
 Go to Containers Menu from Sidebar
 There will be a delete Icon in front of every Container, click that anf click "Delete Forever"
 ```
+
 #### Delete Images OR Containers with Terminal
 ```
 To READ all images we use command: docker images
@@ -111,3 +112,14 @@ To DELETE a running container forcefully we use command: docker container rm <co
 
 
 ## Manage Versions of Images
+```
+Whenever we create a new version of our project, we will need to create a new image of that project
+Now either we can name our image a completely new name OR we can "create" a new version of it
+To remove all the containers and images from a system we can use command: docker system prune--a 
+To CREATE a new version of an image, we need to create the image version simultaneously: docker build -t basic__app:v2 .
+Now if we go to Docker Desktop > Images, we will see the tag value is `v2` instead of `latest`
+
+Now if we want a container to run around `v2` we use command: docker run --name basic-app-container-v2 -p 5000:5000 basic__app:v2
+```
+
+## Volumes in Docker
