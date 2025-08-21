@@ -123,3 +123,13 @@ Now if we want a container to run around `v2` we use command: docker run --name 
 ```
 
 ## Volumes in Docker
+```
+Once a Docker Image builds and a container runs, further changes to the project will not be deflected in the project
+Now to see the changes we would need to rebuild the image and container, which is time taking and painful
+The solution to this is Volumes
+Volumes are basically nodemon of Docker
+First add to Docker image the installation of nodemon and improve the command to run nodemon index.js
+We add to build command: docker run --name basic__container -p 5500:5500 --rm -v /Users/admin/Desktop/basic-app:/app basic-app
+```
+
+## Docker Compose File
