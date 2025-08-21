@@ -1,0 +1,11 @@
+# First we will specify the services, Services can be multiple or single
+services:
+  img: 
+    build: . # as we are making the build in the same directory we simply added a `.` here, If the project involved multiple Technologies such as React, MongoDB, etc., we would have given the path to the directory where the Dockerfile is present, as DockerFile would have also been present in that directory.
+    container_name: node-container # This is the name of the container that will be created
+    ports: 
+    - "3000:3000" # This maps port 3000 of the host to port 3000 of the container
+
+
+
+# To run this file, we will use the command `docker compose up -d` in the terminal.

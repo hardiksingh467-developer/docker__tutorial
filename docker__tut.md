@@ -133,3 +133,16 @@ We add to build command: docker run --name basic__container -p 5500:5500 --rm -v
 ```
 
 ## Docker Compose File
+```
+As our project grows, so will the number of docker commands, which can be lengthy and complex to remember, thats where docker compose file helps us
+Whenever we use Docker we mostly work with commands, whether it is about creating an image or running a container or deleting or stopping them
+Writing such commands in large number can be lengthy and time consuming, complex and sometimes may also include typo's
+For this a file was created which was called compose.yaml
+As our project keeps getting more complex, we can add multiple commands into this file to execute
+For example, If a project uses MongoDB as Database, React as Frontend, NodeJS as bBackend, what we can do is keep the commands of DockerFile of each of these Technologies into a single compose.yaml file
+
+To create a compose file, navigate to the level of package.json: ni compose.yaml
+now refer to compose.yaml file for further learning about compose.yaml file
+```
+
+## Sharing Images on Docker Hub
