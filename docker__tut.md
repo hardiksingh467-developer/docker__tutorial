@@ -146,3 +146,22 @@ now refer to compose.yaml file for further learning about compose.yaml file
 ```
 
 ## Sharing Images on Docker Hub
+```
+Docker Hub is a repository for pages
+Create an Account on Docker Hub 
+Now to create an Image we first need to Create Repository
+Give a Namespace and a repository name and set it visibility
+Copy the PUSH command , Open VSCode and then open Terminal
+In Terminal, first create an image: docker build <repoName> .
+Now we need to login in the terminal, use command: docker login
+Now we need to push our image to Docker Repo: docker push <repoName>
+```
+
+## Uploading Images on server making our application Live
+#### We will use www.labs.play-with-docker.com
+```
+Go to Docker Hub and Login
+Create a new Repository 
+Now this time we have to mention the OS for which we are making the image: docker buildx biuld --platform linux/amd64 -t <accountName/repoName> .
+Now we push the image to Docker Hub
+```
